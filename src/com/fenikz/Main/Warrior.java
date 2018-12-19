@@ -8,8 +8,9 @@ public class Warrior extends Player implements Cast {
     private static final String WARRIOR_SPECIAL_ATTACK = "Coup de Rage";
 
 
-    public Warrior(int mPosition, int playerLevel, int playerHealthPoints, int playerHitPoints, int playerAgility) {
-        super(playerLevel, playerHealthPoints, playerHitPoints, playerAgility);
+    public Warrior(int mPosition, int playerLevel, int playerHealthPoints, int playerHitPoints, int playerAgility, String playerClass, int playerIntelligence, int playerPosition) {
+        super(playerClass, playerLevel, playerHealthPoints, playerHitPoints, playerAgility, playerIntelligence, playerPosition);
+        this.selection();
     }
 
     @Override

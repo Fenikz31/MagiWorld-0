@@ -17,7 +17,7 @@ public abstract class Player {
      * @param playerAgility player's agility
      */
 
-    protected Player(int playerLevel, int playerHealthPoints, int playerHitPoints, int playerAgility) {
+    protected Player(String playerClass, int playerLevel, int playerHealthPoints, int playerHitPoints, int playerAgility, int playerIntelligence, int playerPosition) {
         this.mplayerClass = playerClass;
         this.mplayerLevel = playerLevel;
         this.mplayerHealthPoints = defaultLife();

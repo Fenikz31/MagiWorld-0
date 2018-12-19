@@ -7,9 +7,9 @@ public class Prowler extends Player implements Cast {
     private static final String PROWLER_BASIC_ATTACK = "Tir à l'Arc";
     private static final String PROWLER_SPECIAL_ATTACK = "Concentration";
 
-    public Prowler(int playerLevel, int playerHealthPoints, int playerHitPoints, int playerAgility, int playerintelligence) {
-        super(playerLevel, playerHealthPoints, playerHitPoints, playerAgility );
-
+    public Prowler(String playerClass, int playerLevel, int playerHealthPoints, int playerHitPoints, int playerAgility, int playerIntelligence, int playerPosition) {
+        super( playerClass, playerLevel, playerHealthPoints, playerHitPoints, playerAgility, playerIntelligence, playerPosition );
+        this.selection();
     }
 
     @Override

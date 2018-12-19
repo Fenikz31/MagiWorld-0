@@ -7,8 +7,9 @@ public class Mage extends Player implements Cast {
     public static final String MAGE_BASIC_ATTACK = "Boule de Feu";
     public static final String MAGE_SPECIAL_ATTACK = "Soin";
 
-    public Mage(int playerLevel, int playerHealthPoints, int playerHitPoints, int playerAgility) {
-        super( playerLevel, playerHealthPoints, playerHitPoints, playerAgility );
+    public Mage(String playerClass, int playerLevel, int playerHealthPoints, int playerHitPoints, int playerAgility, int playerIntelligence, int playerPosition) {
+        super( playerClass, playerLevel, playerHealthPoints, playerHitPoints, playerAgility, playerIntelligence, playerPosition );
+        this.selection();
     }
 
     @Override
