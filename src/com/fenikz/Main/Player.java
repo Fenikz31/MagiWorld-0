@@ -1,15 +1,23 @@
-package Player;
+package com.fenikz.Main;
 
 public abstract class Player {
-    private String mplayerClass;
-    private int mplayerLevel;
-    private int mplayerHealthPoints;
-    private int mplayerHitPoints;
-    private int mplayerAgility;
-    private int mplayerIntelligence;
+    private String mplayerClass; 
+    private int mplayerLevel; 
+    private int mplayerHealthPoints; 
+    private int mplayerHitPoints; 
+    private int mplayerAgility; 
+    private int mplayerIntelligence; 
     private int mPlayerPosition;
 
-    protected Player(String playerClass, int playerLevel, int playerHealthPoints, int playerHitPoints, int playerAgility, int playerIntelligence, int playerPosition) {
+    /**
+     * Player's stats creation
+     * @param playerLevel player's level between 0 and 100
+     * @param playerHealthPoints player's life
+     * @param playerHitPoints player's force
+     * @param playerAgility player's agility
+     */
+
+    protected Player(int playerLevel, int playerHealthPoints, int playerHitPoints, int playerAgility) {
         this.mplayerClass = playerClass;
         this.mplayerLevel = playerLevel;
         this.mplayerHealthPoints = defaultLife();
@@ -19,8 +27,20 @@ public abstract class Player {
         this.mPlayerPosition = playerPosition;
     }
 
+    /**
+     * Read Player's name
+     * @return Player's name
+     */
     abstract String getName();
+
+    /**
+     * Read player's class type
+     * @return player's class type
+     */
     abstract String getType();
+
+    abstract void basicAttack(Player player2);
+    abstract void specialAttack(Player player2);
 
     protected String getMplayerClass() {
         return mplayerClass;
@@ -83,12 +103,12 @@ public abstract class Player {
 
 
     /**
-     * Display the instantiation of a personage
+     * Display the instantiation of a player
      */
     protected void selection() {
-        String display = String.format("%s je suis le %s Joueur %d niveau %d je possède %d de vitalité, %d de force, %d d'agilité et %d d'intelligence !",
-                this.getName(),this.getType(),this.mPlayerPosition(), this.getMplayerLevel(), this.defaultLife(), this.getMplayerHitPoints(),
+        String selection = String.format("%s je suis le %s Joueur %d niveau %d je possède %d de vitalité, %d de force, %d d'agilité et %d d'intelligence !",
+                this.getName(),this.getType(),this.getmPlayerPosition(), this.getMplayerLevel(), this.defaultLife(), this.getMplayerHitPoints(),
                 this.getMplayerAgility(), this.getMplayerIntelligence());
-        System.out.println(display);
+        System.out.println(selection);
     }
 }
